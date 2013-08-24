@@ -20,6 +20,11 @@ Demos for a Hands on BeagleBone Black workshop
         # ping google.com
   Have tested this on Angstrom, but should work on Ubuntu, etc. too.
 
+* Transferring files in between host machine and BeagleBone Black
+
+		# sftp root@192.168.7.2
+Common used commands with ftp are mput, mget, exit. You can also use cd and ls to move through remote filesystem.
+Another similar command is scp which is handy if you want to transfer files by in a script.
 * Setting up Adafruit_BBIO
 
 		# git clone git://github.com/adafruit/adafruit-beaglebone-io-python.git
