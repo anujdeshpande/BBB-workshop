@@ -32,10 +32,6 @@ Another similar command is scp which is handy if you want to transfer files by i
 		# cd adafruit-beaglebone-io-python
 		# python setup.py install
 
-* Setting up Userspace Arduino
-
-		# git clone 
-
 * BeagleBone Black and OpenCV
   Derek Molloy's sample code is in boneCV.cpp. To compile use:
   
