@@ -20,17 +20,23 @@ Demos for a Hands on BeagleBone Black workshop
         # ping google.com
   Have tested this on Angstrom, but should work on Ubuntu, etc. too.
 
-* Setting up Userspace Arduino
-
-		# git clone 
-
 * Setting up Adafruit_BBIO
 
 		# git clone git://github.com/adafruit/adafruit-beaglebone-io-python.git
 		# opkg update && opkg install python-distutils python-smbus
 		# cd adafruit-beaglebone-io-python
 		# python setup.py install
-		
+
+* Setting up Userspace Arduino
+
+		# git clone 
+
+* BeagleBone Black and OpenCV
+  Derek Molloy's sample code is in boneCV.cpp. To compile use:
+  
+		# g++ -O2 `pkg-config --cflags --libs opencv` boneCV.cpp -o boneCV
+  OpenCV 2.4.2 comes with preinstalled with the Angstrom image
+  
 Links for information about above demos
 -------------------------------------------------------------------------------
 
@@ -43,6 +49,7 @@ Links for information about BeagleBone Black in general
 -------------------------------------------------------------------------------
 If you are stuck someplace, your first port of call ought to be the mailing list archives( high chances that someone had that problem before).
 If that doesn't yield anything, you can surely find help on the IRC channel.
+
 * [Mailing list: Google Group](https://groups.google.com/forum/?fromgroups#!forum/beagleboard)
 * IRC Channel #beagle on Freenode : *VERY* active and helpful.
 * List of available [capes](http://circuitco.com/support/index.php?title=BeagleBone_Capes)
