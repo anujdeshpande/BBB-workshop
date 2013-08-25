@@ -41,7 +41,7 @@ Another similar command is scp which is handy if you want to transfer files by i
 * Setting up Userspace Arduino
 
 		# git clone http://github.com/prpplague/Userspace-Arduino.git
-		# cd /Userspace-Arduino/arduino-makefile/examples
+		# cd Userspace-Arduino/arduino-makefile/examples
 		
 Links for information about above demos
 -------------------------------------------------------------------------------
