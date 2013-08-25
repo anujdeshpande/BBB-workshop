@@ -37,7 +37,12 @@ Another similar command is scp which is handy if you want to transfer files by i
   
 		# g++ -O2 `pkg-config --cflags --libs opencv` boneCV.cpp -o boneCV
   OpenCV 2.4.2 comes with preinstalled with the Angstrom image
-  
+
+* Setting up Userspace Arduino
+
+		# git clone http://github.com/prpplague/Userspace-Arduino.git
+		# cd /Userspace-Arduino/arduino-makefile/examples
+		
 Links for information about above demos
 -------------------------------------------------------------------------------
 
