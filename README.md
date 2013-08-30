@@ -34,9 +34,12 @@ Another similar command is scp which is handy if you want to transfer files by i
 
 * BeagleBone Black and OpenCV
   Derek Molloy's sample code is in boneCV.cpp. To compile use:
-  
+
 		# g++ -O2 `pkg-config --cflags --libs opencv` boneCV.cpp -o boneCV
-  OpenCV 2.4.2 comes preinstalled with the Angstrom image
+  OpenCV 2.4.2 comes preinstalled with the Angstrom image.
+  Current version of the Angstrom doesn't have python-opencv package by default. To install use:
+
+		# opkg install http://dominion.thruhere.net/koen/angstrom/python-opencv_2.4.2-r3.10_armv7a-vfp-neon.ipk
 
 * Setting up Userspace Arduino
 
@@ -53,7 +56,7 @@ Links for information about above demos
 
 Links for information about BeagleBone Black in general
 -------------------------------------------------------------------------------
-If you are stuck someplace, your first port of call ought to be the mailing list archives( high chances that someone had that problem before).
+If you are stuck someplace, your first port of call ought to be the mailing list archives( high chances that someone has faced that problem before).
 If that doesn't yield anything, you can surely find help on the IRC channel.
 
 * [Mailing list: Google Group](https://groups.google.com/forum/?fromgroups#!forum/beagleboard)
