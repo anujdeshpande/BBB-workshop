@@ -1,11 +1,11 @@
+import tornado.ioloop
+import tornado.web
 import time
 import Adafruit_BBIO.GPIO as GPIO
 import cv,cv2
 
 GPIO.setup("P8_10", GPIO.OUT)
-
-from flask import Flask
-app = Flask(__name__)
+intruder = 1
 
 def blink():
     for i in range(0, 5):
@@ -14,11 +14,18 @@ def blink():
         GPIO.output("P8_10",GPIO.LOW);
         time.sleep(1)
 
-@app.route("/")
-
-def hello():
-    return "Hello World!"
+class MainHandler(tornado.web.RequestHandler):
+    def get(self):
+        if(intruder):
+            self.write("Intruder Alert")
+            blink()
+        else:
+            self.write("Safe and secure")
+        
+application = tornado.web.Application([
+    (r"/", MainHandler),
+])
 
 if __name__ == "__main__":
-    app.run()
-    GPIO.cleanup()
+    application.listen(8888)
+    tornado.ioloop.IOLoop.instance().start()
