@@ -25,13 +25,6 @@ Demos for a Hands on BeagleBone Black workshop
 		# sftp root@192.168.7.2
 Common used commands with ftp are mput, mget, exit. You can also use cd and ls to move through remote filesystem.
 Another similar command is scp which is handy if you want to transfer files by in a script.
-* Setting up Adafruit_BBIO
-
-		# git clone git://github.com/adafruit/adafruit-beaglebone-io-python.git
-		# opkg update && opkg install python-distutils python-smbus
-		# cd adafruit-beaglebone-io-python
-		# python setup.py install
-
 * BeagleBone Black and OpenCV
   Derek Molloy's sample code is in boneCV.cpp. To compile use:
 
@@ -41,12 +34,38 @@ Another similar command is scp which is handy if you want to transfer files by i
 
 		# opkg install http://dominion.thruhere.net/koen/angstrom/python-opencv_2.4.2-r3.10_armv7a-vfp-neon.ipk
 
+Arduino-like code on the Black
+-------------------------------------------------------------------------------
+
 * Setting up Userspace Arduino
 
 		# git clone http://github.com/prpplague/Userspace-Arduino.git
 		# cd Userspace-Arduino/arduino-makefile/examples
+* To compile any of the examples, cd to the directory
+
+        # make
+		# cd 
+Python on the Black
+-------------------------------------------------------------------------------
+* Setup network access
+* Get pip
+  
+		# opkg update
+		# opkg install python-pip
+* To install flask
+
+		# pip install https://pypi.python.org/packages/source/F/Flask/Flask-0.10.1.tar.gz#md5=378670fe456957eb3c27ddaef60b2b24
 		
-Links for information about above demos
+* Setting up Adafruit_BBIO
+
+		# git clone git://github.com/adafruit/adafruit-beaglebone-io-python.git
+		# opkg update && opkg install python-distutils python-smbus
+		# cd adafruit-beaglebone-io-python
+		# python setup.py install
+
+
+
+Links for more information about above demos
 -------------------------------------------------------------------------------
 
 * [Derek Molloy's opencv tutorial](http://derekmolloy.ie/beaglebone/beaglebone-video-capture-and-image-processing-on-embedded-linux-using-opencv)
