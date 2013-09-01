@@ -26,35 +26,7 @@ Getting Started
 Common used commands with ftp are mput, mget, exit. You can also use cd and ls to move through remote filesystem.
 Another similar command is scp which is handy if you want to transfer files by in a script.
 
-BeagleBone Black and OpenCV
--------------------------------------------------------------------------------
-
-* OpenCV 2.4.2 comes preinstalled with the Angstrom image.
-
-* Current version of the Angstrom doesn't have python-opencv package by default. To install use:
-
-		# opkg install http://dominion.thruhere.net/koen/angstrom/python-opencv_2.4.2-r3.10_armv7a-vfp-neon.ipk
-
-* Capture image using a camera connected to the Black.
-
-        # python capture.py
-		
-Arduino code on the Black
--------------------------------------------------------------------------------
-
-* Setting up Userspace Arduino
-
-		# git clone http://github.com/prpplague/Userspace-Arduino.git
-		# cd Userspace-Arduino/arduino-makefile/examples
-* To compile any of the examples, cd to the directory
-
-        # cd BlinkUserspace
-		# make
-		# cd build-userspace
-		# ./BlinkUserspace.elf
-  Look at the USR LED pins on the Black to see a blinking led (USR LED 3)
-  
-Python on the Black
+Python 
 -------------------------------------------------------------------------------
 * Setup network access
 * Get pip
@@ -72,6 +44,35 @@ Python on the Black
 * You can now try out the blink.py demo
 
 		# python blink.py
+
+OpenCV
+-------------------------------------------------------------------------------
+
+* OpenCV 2.4.2 comes preinstalled with the Angstrom image.
+
+* Current version of the Angstrom doesn't have python-opencv package by default. To install use:
+
+		# opkg install http://dominion.thruhere.net/koen/angstrom/python-opencv_2.4.2-r3.10_armv7a-vfp-neon.ipk
+
+* Capture image using a camera connected to the Black.
+
+        # python capture.py
+		
+Arduino code 
+-------------------------------------------------------------------------------
+
+* Setting up Userspace Arduino
+
+		# git clone http://github.com/prpplague/Userspace-Arduino.git
+		# cd Userspace-Arduino/arduino-makefile/examples
+* To compile any of the examples, cd to the directory
+
+        # cd BlinkUserspace
+		# make
+		# cd build-userspace
+		# ./BlinkUserspace.elf
+  Look at the USR LED pins on the Black to see a blinking led (USR LED 3)
+  
   
 
 
