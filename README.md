@@ -1,7 +1,7 @@
 BBB-workshop
 ============
 
-Demos for a Hands on BeagleBone Black workshop
+Getting Started
 -------------------------------------------------------------------------------
 
 * To have network access on the Black using just the USB wire, follow these steps.
@@ -25,16 +25,27 @@ Demos for a Hands on BeagleBone Black workshop
 		# sftp root@192.168.7.2
 Common used commands with ftp are mput, mget, exit. You can also use cd and ls to move through remote filesystem.
 Another similar command is scp which is handy if you want to transfer files by in a script.
-* BeagleBone Black and OpenCV
+
+BeagleBone Black and OpenCV
+-------------------------------------------------------------------------------
+
+* OpenCV 2.4.2 comes preinstalled with the Angstrom image.
   Derek Molloy's sample code is in boneCV.cpp. To compile use:
 
 		# g++ -O2 `pkg-config --cflags --libs opencv` boneCV.cpp -o boneCV
-  OpenCV 2.4.2 comes preinstalled with the Angstrom image.
-  Current version of the Angstrom doesn't have python-opencv package by default. To install use:
+		# ./boneCV
+
+  This will use the USB camera attached to capture and image and store it in captures.png. It also creates edges.png which has only the edges from capture.png (it uses the Canny edge detector)
+
+* Current version of the Angstrom doesn't have python-opencv package by default. To install use:
 
 		# opkg install http://dominion.thruhere.net/koen/angstrom/python-opencv_2.4.2-r3.10_armv7a-vfp-neon.ipk
 
-Arduino-like code on the Black
+* Capture image using a camera connected to the Black.
+
+        # python capture.py
+		
+Arduino code on the Black
 -------------------------------------------------------------------------------
 
 * Setting up Userspace Arduino
@@ -43,8 +54,12 @@ Arduino-like code on the Black
 		# cd Userspace-Arduino/arduino-makefile/examples
 * To compile any of the examples, cd to the directory
 
-        # make
-		# cd 
+        # cd BlinkUserspace
+		# make
+		# cd build-userspace
+		# ./BlinkUserspace.elf
+  Look at the USR LED pins on the Black to see a blinking led (USR LED 3)
+  
 Python on the Black
 -------------------------------------------------------------------------------
 * Setup network access
@@ -52,17 +67,18 @@ Python on the Black
   
 		# opkg update
 		# opkg install python-pip
-* To install flask
+  You can now use pip to install your favourite python packages
 
-		# pip install https://pypi.python.org/packages/source/F/Flask/Flask-0.10.1.tar.gz#md5=378670fe456957eb3c27ddaef60b2b24
-		
 * Setting up Adafruit_BBIO
 
 		# git clone git://github.com/adafruit/adafruit-beaglebone-io-python.git
 		# opkg update && opkg install python-distutils python-smbus
 		# cd adafruit-beaglebone-io-python
 		# python setup.py install
+* You can now try out the blink.py demo
 
+		# python blink.py
+  
 
 
 Links for more information about above demos

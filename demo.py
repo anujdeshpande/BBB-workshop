@@ -2,10 +2,17 @@ import tornado.ioloop
 import tornado.web
 import time
 import Adafruit_BBIO.GPIO as GPIO
-import cv,cv2
+import cv
 
 GPIO.setup("P8_10", GPIO.OUT)
-intruder = 1
+i=1
+intruder=0
+while(True):
+    # run this loop till there is a change in the image
+    i=i+1
+    if(i=10):
+        break
+intruder=1
 
 def blink():
     for i in range(0, 5):
