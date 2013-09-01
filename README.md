@@ -27,7 +27,7 @@ Common used commands with ftp are mput, mget, exit. You can also use cd and ls t
 Another similar command is scp which is handy if you want to transfer files by in a script.
 
 BeagleBone Black and OpenCV
-n-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 * OpenCV 2.4.2 comes preinstalled with the Angstrom image.
 
