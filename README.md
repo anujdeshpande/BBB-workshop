@@ -27,15 +27,9 @@ Common used commands with ftp are mput, mget, exit. You can also use cd and ls t
 Another similar command is scp which is handy if you want to transfer files by in a script.
 
 BeagleBone Black and OpenCV
--------------------------------------------------------------------------------
+n-------------------------------------------------------------------------------
 
 * OpenCV 2.4.2 comes preinstalled with the Angstrom image.
-  Derek Molloy's sample code is in boneCV.cpp. To compile use:
-
-		# g++ -O2 `pkg-config --cflags --libs opencv` boneCV.cpp -o boneCV
-		# ./boneCV
-
-  This will use the USB camera attached to capture and image and store it in captures.png. It also creates edges.png which has only the edges from capture.png (it uses the Canny edge detector)
 
 * Current version of the Angstrom doesn't have python-opencv package by default. To install use:
 
@@ -84,7 +78,6 @@ Python on the Black
 Links for more information about above demos
 -------------------------------------------------------------------------------
 
-* [Derek Molloy's opencv tutorial](http://derekmolloy.ie/beaglebone/beaglebone-video-capture-and-image-processing-on-embedded-linux-using-opencv)
 * [Userspace Arduino wiki](http://elinux.org/Userspace_Arduino)
 * [Adafruit BBIO](http://learn.adafruit.com/setting-up-io-python-library-on-beaglebone-black/using-the-bbio-library)
 
