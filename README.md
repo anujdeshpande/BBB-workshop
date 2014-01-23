@@ -19,6 +19,10 @@ Getting Started
   
         # ping google.com
   Have tested this on Angstrom, but should work on Ubuntu, etc. too.
+* BBB doesn't have a RTC(Real Time Clock). To set network time	
+
+	# ntpdate -b -s -u pool.ntp.org
+  
 
 * Transferring files in between host machine and BeagleBone Black
 
