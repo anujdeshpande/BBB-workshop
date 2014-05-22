@@ -10,10 +10,16 @@ Getting Started
         # /sbin/route add default gw 192.168.7.1
 		# echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 
-  On the Linux host from which you want to route:
+  On the Linux host (except Fedora) from which you want to route:
 
         # sudo iptables -A POSTROUTING -t nat -j MASQUERADE
         # sudo echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
+        
+  On a Fedora machine instead of above two intsructions:
+	1) Open Firewall settings.
+	2) Select zone as public.
+	3) In the side tab panel select masquerading
+	4) Enable Masquerade zones.
 
   Now on the BBB:
   
