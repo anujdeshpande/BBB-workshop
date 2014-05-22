@@ -16,10 +16,10 @@ Getting Started
         # sudo echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward > /dev/null
         
   On a Fedora machine instead of above two intsructions:
-	1) Open Firewall settings.
-	2) Select zone as public.
-	3) In the side tab panel select masquerading
-	4) Enable Masquerade zones.
+	# 1) Open Firewall settings.
+	# 2) Select zone as public.
+	# 3) In the side tab panel select masquerading
+	# 4) Enable Masquerade zones.
 
   Now on the BBB:
   
