@@ -8,7 +8,7 @@ Getting Started
   On the Black do:
 
         # /sbin/route add default gw 192.168.7.1
-		# echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+		# echo nameserver 8.8.8.8 | sudo tee -a /etc/resolv.conf
 
   On the Linux host (except Fedora) from which you want to route:
 
